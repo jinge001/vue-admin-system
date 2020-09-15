@@ -18,7 +18,6 @@
 </template>
 
 <script>
-	import {post_} from '@/components/js/request'
 	import store from '../store'
 	export default {
 		data: function(){
@@ -47,6 +46,30 @@
 					},
 					extend: {
 						rules:[
+							{
+								create_time: "1590631375",
+								desc: "table表格",
+								icon: "iconfont icon-fenlei",
+								id: "2",
+								is_menu: "1",
+								name: "table表格",
+								path: "",
+								pid: "0",
+								sort: "1",
+								type: "1",
+							},
+							{
+								create_time: "1553951425",
+								desc: "table表格demo",
+								icon: "iconfont icon-gouxuan1",
+								id: "1",
+								is_menu: "1",
+								name: "table表格demo",
+								path: "/page/table/tabledemo",
+								pid: "2",
+								sort: "1",
+								type: "1",
+							},
 							{
 								create_time: "1590631375",
 								desc: "菜单管理",
@@ -147,7 +170,33 @@
 										type: "1",
 									},
 								]
-							}
+							},
+							{
+								create_time: "1590631375",
+								desc: "table表格",
+								icon: "iconfont icon-fenlei",
+								id: "2",
+								is_menu: "1",
+								name: "table表格",
+								path: "",
+								pid: "0",
+								sort: "1",
+								type: "1",
+								children: [
+									{
+										create_time: "1553951425",
+										desc: "table表格demo",
+										icon: "iconfont icon-gouxuan1",
+										id: "1",
+										is_menu: "1",
+										name: "table表格demo",
+										path: "/page/table/tabledemo",
+										pid: "2",
+										sort: "1",
+										type: "1",
+									},
+								]
+							},
 						]
 					}
 				}
@@ -164,7 +213,7 @@
 				this.$refs[formName].validate((valid) => {
 					if (valid) {
 						// console.log(this.ruleForm);
-						// post_('admin/connect/login',this.ruleForm,(res)=>{
+						// api.login(this.ruleForm).then(res => {
 							// console.log(res);
 							if(this.ruleForm.username == 1 && this.ruleForm.password == 1 ){
 								

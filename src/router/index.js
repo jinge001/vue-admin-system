@@ -28,11 +28,6 @@ export const constantRouterMap = [
         component: resolve => require(['../components/common/Home.vue'], resolve),
         meta: { title: '自述文件' },        
     },
-    // {
-    //     path: '/wareHouseManage/locationDetail',
-    //     component: resolve => require(['../page/wareHouseManage/locationDetail.vue'], resolve),
-    //     meta: { title: '库位详情' },        
-    // },
 ];
 
 export default new Router({

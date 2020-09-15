@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api':{
-          target:'http://ware.manhaoshenghuo.cn/v1/',
+          target:'http://jsonplaceholder.typicode.com',
           changeOrigin:true,
           pathRewrite:{
               '/api':''

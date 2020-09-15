@@ -8,11 +8,12 @@ import 'element-ui/lib/theme-chalk/index.css';    // 默认主题
 import '../static/css/icon.css';
 import "babel-polyfill";
 import store from './store';
-import {post_} from './components/js/request.js';
-import * as cusFilter from './components/js/filters.js';
+import * as cusFilter from './utils/filters.js';
 
 Vue.use(ElementUI, { size: 'small' });
-Vue.prototype.$post_ = post_;
+
+Vue.prototype.$axios = axios;
+
 
 // 导出的是对象，可以直接通过key和value来获得过滤器的名和过滤器的方法
 Object.keys(cusFilter).forEach(key => {
@@ -35,5 +36,6 @@ router.beforeEach((to, from, next) => {
 
 new Vue({
     router,
+    store,
     render: h => h(App)
 }).$mount('#app');
